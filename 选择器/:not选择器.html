@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>:not 选择器</title>
+  <style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    width: 690px;
+    margin: 20px auto;
+    /* letter-spacing 用来控制字符之间的间距 */
+    letter-spacing: -4px;
+    word-spacing: -4px;
+    font-size: 0;
+  }
+  li {
+    font-size: 16px;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    zoom: 1;
+    list-style: none outside none;
+    margin: 5px;
+  }
+  img {
+    width: 128px;
+    height: 128px;
+  }
+  .gallery li:nth-child(2) {
+    filter: grayscale(1);
+  }
+  .gallery li:nth-child(3) {
+    filter: sepia(1);
+  }
+  .gallery li:nth-child(4) {
+    filter: saturate(1);
+  }
+  .gallery li:nth-child(5) {
+    filter: hue-rotate(1);
+  }
+  .gallery li:nth-child(6) {
+    filter: invert(1);
+  }
+  .gallery li:nth-child(7) {
+    filter: opacity(0.2);
+  }
+  .gallery li:nth-child(8) {
+    filter: blur(3px);
+  }
+  .gallery li:nth-child(9) {
+    filter: drop-shadow(5px 5px 5px #ccc);
+  }
+  .gallery li:nth-child(10) {
+    filter: drop-shadow(5px 5px 5px #ccc);
+  }
+  /* gallery hover 的时候,li 没有hover的元素设置样式 */
+  .gallery:hover li:not(:hover) {
+    filter: blur(2px) grayscale(1);
+    opacity: .7;
+  }
+  </style>
+</head>
+<body>
+  <ul class="gallery">
+    <li>
+      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1579085567268&di=9b94794fd97fa66e9dcd5a8125b9ec6e&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F16%2F12%2F01300535031999137270128786964.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1579085567268&di=9b94794fd97fa66e9dcd5a8125b9ec6e&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F16%2F12%2F01300535031999137270128786964.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1579085567268&di=9b94794fd97fa66e9dcd5a8125b9ec6e&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F16%2F12%2F01300535031999137270128786964.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1579085567268&di=9b94794fd97fa66e9dcd5a8125b9ec6e&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F16%2F12%2F01300535031999137270128786964.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1579085567268&di=9b94794fd97fa66e9dcd5a8125b9ec6e&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F16%2F12%2F01300535031999137270128786964.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1579085567268&di=9b94794fd97fa66e9dcd5a8125b9ec6e&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F16%2F12%2F01300535031999137270128786964.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1579085567268&di=9b94794fd97fa66e9dcd5a8125b9ec6e&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F16%2F12%2F01300535031999137270128786964.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1579085567268&di=9b94794fd97fa66e9dcd5a8125b9ec6e&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F16%2F12%2F01300535031999137270128786964.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1579085567268&di=9b94794fd97fa66e9dcd5a8125b9ec6e&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F16%2F12%2F01300535031999137270128786964.jpg" alt="">
+    </li>
+  </ul>
+</body>
+</html>

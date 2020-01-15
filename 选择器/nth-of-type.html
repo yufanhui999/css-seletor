@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script
+  src="./jquery.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+// Make a request for a user with a given ID
+  axios.get('https://www.ncbi.nlm.nih.gov/pmc/?term=western')
+    .then(function (response) {
+      // handle success
+      console.log(response);
+    }).catch(res => {
+      console.log(res)
+    })
+  let NSuggest_CreateData = (params, data) => {
+    console.log(params,data)
+  }
+  const html = ''
+  $('.div').html(html)
+    // $.ajax({
+    //   url:"http://www.ncbi.nlm.nih.gov/portal/utils/autocomp.fcgi?dict=pmc-search-autocomplete&q=3333",
+    //   dataType: 'jsonp',
+    //   type: 'get',
+    //   success:function(res){
+    //     // console.log(res)
+    //   },
+    //   error: function (res) {
+    //     // console.log(res)
+    //   },
+    //   complete: function (res) {
+    //   }
+    // });
+    // $.ajax({
+    //   url:"https://www.ncbi.nlm.nih.gov/pmc/?term=western",
+    //   // dataType: 'jsonp',
+    //   type: 'get',
+    //   success:function(res){
+    //     console.log(res)
+    //   },
+    //   error: function (res) {
+    //     console.log(res)
+    //   },
+    //   complete: function (res) {
+    //     console.log(res)
+    //     $('.div').html(res)
+    //   }
+    // });
+  </script>
+  <div class="div"></div>
+</body>
+</html>

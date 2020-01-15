@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Css3属性选择器的使用</title>
+  <style>
+    .demo {
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      overflow: hidden;
+      margin: 20px auto;
+    }
+    .demo a{
+      float: left;
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      text-align: center;
+      background: #aac;
+      color: blue;
+      font:bold 20px/50px Arial;
+      text-decoration: none;
+      margin: 5px;
+    }
+    /* 属性选择器 */
+    /* 选择 具有某个id 的元素 */
+    /* a[id]{
+      background-color: yellow;
+    } */
+    /* 选择多个属性的 方式 */
+    /* a[id][title] {
+      background-color: red;
+    } */
+    /* 选择id 为_blank 的元素  */
+    /* a[id=second] {
+      background-color: teal;
+    } */
+    /* 选择属性值等于 zh 或以 zh- 开头的所有字符串属性的元素*/
+    a[lang|=zh] {
+      background-color: thistle;
+    }
+    /* a[class~="second"] {
+      background-color: tomato;
+    } */
+    /* 只要包含 second 的元素 */
+    a[class~="second"] {
+      background-color: tomato;
+    }
+    /* 以http 开头的元素 */
+    a[href^=http] {
+      background-color: turquoise;
+    }
+    /* 以http结尾的元素 */
+    a[href$=png] {
+      background-color: antiquewhite;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo">
+    <a href="htts://www.baidu.png" target="_blank" class="links item first second" id="first" lang="zh-ss">1</a>
+    <a href="https://www.baidu.com" target="_blank" class="links item first second"  title="www website">2</a>
+    <a href="https://www.baidu.com" target="_blank" class="links item first"  title="www">3</a>
+    <a href="https://www.baidu.com" target="_blank" class="links item first"  title="www">4</a>
+    <a href="https://www.baidu.com" target="_blank" class="links item first"  title="www">5</a>
+    <a href="https://www.baidu.com" target="_blank" class="links item first" id="second" title="www">6</a>
+    <a href="https://www.baidu.com" target="_blank" class="links item first"  title="www">7</a>
+    <a href="https://www.baidu.com" target="_blank" class="links item first"  title="www">8</a>
+    <a href="https://www.baidu.com" target="_blank" class="links item first"  title="www">9</a>
+    <a href="https://www.baidu.com" target="_blank" class="links item first" id="first" title="www">10</a>
+  </div>
+</body>
+</html>

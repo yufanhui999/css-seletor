@@ -1,0 +1,21 @@
+div {
+  border: 1px solid #ccc;
+}
+div div {
+  background: orange;
+}
+
+/* 相邻兄弟选择器
+  E + F 都属于同辈关系，F 是 E 后面的元素，只能选中一个
+*/
+.active + div {
+  background-color: aqua;
+}
+
+/* 通用兄弟选择器
+  E ~ F 属于同辈关系， F 是 E 后面的所有 F元素，能选中多个
+*/
+
+.active ~ div {
+  background-color: blue;
+}
